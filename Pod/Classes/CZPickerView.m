@@ -336,6 +336,7 @@ typedef void (^CZDismissCompletionCallback)(void);
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
+    cell.accessibilityLabel = [NSString stringWithFormat:@"czpicker_row_%ld", (long)indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryNone;
     for(NSIndexPath *ip in self.selectedIndexPaths){
         if(ip.row == indexPath.row){
